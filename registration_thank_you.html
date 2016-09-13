@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<TITLE>Registration Thank You</TITLE>
+<link rel="stylesheet" href="https://presentations.inxpo.com/SharedContent/QuickRegistration/Templates/QR_Frame_Template-2/css/main.css" type="text/css" media="screen" />  
+<script type="text/javascript" src="/cfr/scripts/XBrowser.js"></script>
+<script type="text/javascript" src="/cfr/scripts/ClientFormLib.js"></script>
+<script type="text/javascript">
+
+function window_onload()
+  {
+	 window.top.scrollTo(0,"reg_top");
+  }
+//Invite a friend
+
+function CheckContentForm()
+  {
+  var formComplete = true;
+    with (document.SubmitForm)
+      {
+        if (FromEMailAddress.value == "")
+          {
+            alert("You must enter your email address");
+            formComplete = false;
+          }
+        if (ToEMailAddressList.value == "")
+          {
+            alert("You must a friend's email address");
+            formComplete = false;
+          }
+        
+      var fieldValue = FromEMailAddress.value;
+      if(fieldValue != "")
+        {  
+          var atSymbol = 0
+        
+          //loop through field value string
+          for(var a = 0; a < fieldValue.length; a++)
+            {
+              //look for @ symbol and for each @ found, increment atSymbol variable by 1
+              if(fieldValue.charAt(a) == "@"){ 
+              atSymbol++
+              }
+            }
+          
+          // if more than 1 @ symbol exists
+          if(atSymbol > 1)
+            { 
+            // then cancel and don't submit form
+            alert("Please Enter A Valid Email Address") 
+            formComplete = false;
+                  return false;  
+            }
+          
+          // if 1 @ symbol was found, and it is not the 1st character in string
+          if(atSymbol == 1 && fieldValue.charAt(0) != "@")
+            {
+              //look for period at 2nd character after @ symbol 
+              var period = fieldValue.indexOf(".",fieldValue.indexOf("@")+2) 
+              
+              // "."  immediately following 1st "." ? 
+              var twoPeriods = (fieldValue.charAt((period+1)) == ".") ? true : false 
+                  
+              //if period was not found OR 2 periods together OR field contains less than 5 characters OR period is in last position
+              if(period == -1 || twoPeriods || fieldValue.length < period + 2 || fieldValue.charAt(fieldValue.length-1)==".")
+                {
+                // then cancel and don't submit form
+                alert("Please Enter A Valid Email Address") 
+                formComplete = false;
+                        return false;  
+                }
+            }
+          // no @ symbol exists or it is in position 0 (the first character of the field)
+          else
+            { 
+              // then cancel and don't submit form
+              alert("Please Enter A Valid Email Address")
+              formComplete = false;
+                return false;  
+            }
+        }
+      // if field is empty
+      else
+        {  
+          // then cancel and don't submit form
+          alert("Please Enter A Valid Email Address")
+          formComplete = false;
+            return false;  
+        }		
+      }
+    if (formComplete == true)
+      { 	
+        var oButton = document.getElementById("SubmitButton");
+        oButton.value = "Please Wait......";	
+        document.SubmitForm.ShowKey.value = 6602 ;/***** SHOW KEY GOES HERE*******   - ie. document.SubmitForm.ShowKey.value = 1747;      ********/
+        document.SubmitForm.submit();
+        setTimeout("GoToPage()", 3000);
+      }
+  }
+  
+function GoToPage()
+  {
+    document.location='Invite_Friend_thankyou.htm';
+  }
+</script>
+
+<style>
+h2
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#484848;
+	font-size:18px;	
+}
+
+a
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#484848;
+}
+
+body
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#484848;
+	background:#FFF; !important;
+}
+
+h2
+{
+	text-indent:22px;
+}
+
+p
+{
+  text-indent:22px;
+}
+
+form 
+{
+  margin-left: 11px; !important;
+  padding:0px; !important
+}
+
+form fieldset input
+{
+	font-size:14px; 
+	padding:5px; !important;
+	text-align:center;
+}
+
+form fieldset textarea
+{
+	font-size:14px; 
+	padding:5px; !important;
+}
+
+fieldset
+{
+	float:left; !important;
+}
+
+.InviteUserSubmitButton
+{
+	padding:2px;
+	height:35px;
+	width:70px;	
+}
+
+br
+{
+	clear:left;
+}
+
+#Title
+{
+	color: #007dc2;
+}
+</style>
+
+</head>
+
+<body onLoad="window_onload()">
+  <!-- *****************************Start GOOGLE ANALYTICS*********************************** -->
+
+  <!-- *****************************End GOOGLE ANALYTICS*********************************** -->
+
+  <h2 id="Title">Registration is Complete!</h2>
+  <p>Thank you for your confirmed registration and we look forward to your attendance.</p>
+  <p>Invite Colleagues and Friends to this exciting virtual event.</p>
+
+  <form action="https://vts.inxpo.com/scripts/Server.nxp" method="POST" name="SubmitForm" target="SubmitFrame">
+    <input type="hidden" name="LASCmd" value="AI:4;D:11001" />
+    <input type="hidden" name="ShowKey" />
+
+    <fieldset>
+    <label>Your Email Address:</label><br />
+    <input  name="FromEMailAddress" value="::{EMailAddress}" inputtype="RE" style="width:400px;"  title="FROM Address" ></input>
+    </fieldset>
+    <br />
+    <fieldset>
+    <label>Colleague Email Address(s):</label><br />
+    <textarea name="ToEMailAddressList" rows="3"  id="ToEMailAddressList" style="width:400px;" title="TO Address List" inputtype="R"></textarea>
+    </fieldset>
+    <br />
+    <fieldset>
+    <label>Comments:</label><br />
+    <textarea  name="PersonalMessage" rows="5" style="width:400px;">I thought you would be interested in attending the DuPont Medical Packaging Community and Webinar Series. This event includes Expert Industry Speakers, Networking, and resources! And to top it off it's all virtual and completely paid for by the Sponsor - Check it out and sign up for your complimentary pass.</textarea>
+    </fieldset>
+    <br />
+    <fieldset>
+    <input  type="button" value="Send" id="SubmitButton" onClick="CheckContentForm()"></input>
+    </fieldset>
+    <br />
+  </form>
+     
+  <iframe height="1" width="1" style="display:none" src="loading.html" name="SubmitFrame"></iframe>
+  <img src="http://ubmtech.112.2o7.net/b/ss/ubmvtsinxpocomcanon/1/H.26/s28372865486510?AQB=1&ndh=1&t=3/1/2014%209:37:51%204%20420&fid=76E84F2E2B9C17A4-0BDAE0CB31910F6F&ce=UTF-8&ns=ubmtech&g=Server.nxp?LASCmd=AI:4;F:APIUTILS!51004&PageID=AA019486-CE80-4490-8E78-843771CB0B8F&r=https://presentations.inxpo.com/Shows/UBM/UBMCanon/DuPont/Microsite/registration.htm&cc=USD&ch=registration&c1=registration%3Asuccess&c2=registration%3Asuccess&c3=registration%3Asuccess&c4=registration%3Asuccess&c5=registration%3Asuccess&pageName=registration%3Asuccess&c22=UBM&c30=registration&v16=::{EMailAddress}&v17=registration%3Asuccess&events=event10%3Aevent10:1000&s=1280x1024&c=24&j=1.8.5&v=Y&k=Y&bw=1266&bh=608&AQE=1"
+  width="1" height="1" border="0" />
+
+</body>
+</html>

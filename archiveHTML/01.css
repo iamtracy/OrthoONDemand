@@ -1,0 +1,476 @@
+/* TEXT STYLES TO EDIT */
+	
+
+   /* All Links */
+A:link    {color:#666666; text-decoration:underline;}
+A:visited {color:#666666; text-decoration:underline;}
+A:active  {color:#666666; text-decoration:underline;}
+A:hover   {
+	color:#0099FF;
+	text-decoration:underline;
+}
+
+/* Navigation Menu Styles */
+
+.NavBar { 
+font-family: Open Sans; 
+font-size: 12px; 
+font-weight: bold; 
+color: #525252  
+text-align: center;
+border-bottom: 1px solid #cccccc; }
+
+.NavBarCurrent { 
+font-family: Open Sans; 
+font-size: 12px; 
+font-weight: bold; 
+color: #000000; 
+background-repeat: repeat-x; 
+text-align: center; 
+border-bottom: 1px solid #cccccc; }
+
+.navLink {
+	font-size: 12px;
+	font-family: Open Sans; 
+	font-weight: bold;
+	color: #525252;
+	padding: 0px 0 0px 0;
+	text-decoration:none;
+    }
+
+.NavBar A:link    {color:#525252; text-decoration:none;}
+.NavBar A:visited {color:#525252; text-decoration:none;}
+.NavBar A:active  {color:#000000; text-decoration:none;}
+.NavBar A:hover   {
+	color:#000000;
+	text-decoration:none;
+}
+
+
+/* Login Styles */
+
+#LoginTable {
+	opacity:80;
+	-moz-opacity:.8;
+	filter:alpha(opacity=80);
+}
+
+/*
+.LoginBody {
+    margin:0px 0px 0px 0px;
+    padding:0;
+	color: #525252;	
+    }
+
+.LoginText {
+	font-family:Open Sans;
+	font-size: 12px;
+	color: #525252;
+    }
+	
+.Title {
+	font-size: 20px;
+	font-weight: bold;
+	color: #525252;
+	padding: 0px 0 20px 0;
+    }
+
+.Title_2 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #525252;
+	padding: 15px 0 0px 0;
+    }
+	
+.sub_Title {
+	font-size: 12px;
+	font-weight: bold;
+	color: #525252;
+	padding: 0px 0 10px 0;
+    }
+
+.Speaker {
+	font-size: 12px;
+	font-weight: bold;
+	color: #525252;
+	padding: 0px 0 0px 0;
+    }
+
+.Speaker_photo {
+	border-left: 1px solid #cccccc; 
+	border-right: 1px solid #cccccc; 
+	border-top: 1px solid #cccccc; 
+	border-bottom: 1px solid #cccccc; 
+    }
+
+.indent{
+	padding: 0px 0px 0px 50px;
+}
+	
+.content_divider {
+	border-top-width: 2px;
+	border-top-style: dotted;
+	border-top-color: #dde2e6;
+	clear: left;
+	text-align: center;
+	width: 500px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+
+
+}
+
+.content_divider_speakers {
+	border-top-width: 2px;
+	border-top-style: dotted;
+	border-top-color: #dde2e6;
+	clear: left;
+	text-align: center;
+	width: 500px;
+	margin-bottom: 0px;
+	margin-top: 2px;
+
+
+}
+	
+.PC_Reqs {
+	font-family: Open Sans;
+	font-size: 11px;
+	color: #666666;
+    }
+
+
+.ForgotPasswordSpanText{
+	color:#666666;
+	font-size:10px;
+}
+
+.InvalidPassword {
+	font-family: Open Sans;
+	font-size: 12px;
+	font-weight: bold;
+	color: #DC0000;
+}
+
+/* User Agreement Styles */
+
+.Message1111 {overflowY: auto;
+	overflowW: hidden;
+	overflow: auto;
+	position:relative;
+	left:0px;
+	top:5px;
+	width:100%;
+	height:79px;
+	z-index:1;
+	font-family: Open Sans;
+	font-size: 10px;
+	color: #666666;
+	vertical-align: top;
+	background-color: white;
+	visibility: visible;
+	border:solid 1px #CCCCCC;
+	padding:5px;
+}
+
+/* Helpful Info STYLES */
+
+
+.BorderLeft{
+	border-left: 1px solid #cccccc; 
+}
+
+.InfoHeader {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000000;
+	padding: 0px 0 20px 0;
+    }
+	
+.SponsorType {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666699;
+	padding: 0px 0 0px 0;
+    }
+	
+.Exhibitors {
+	font-size: 10px;
+	color: #666666;
+    }
+	
+.divider {
+	border-top-width: 2px;
+	border-top-style: dotted;
+	border-top-color: #dde2e6;
+	clear: left;
+	text-align: center;
+	width: 180px;
+	margin-bottom: 5px;
+	margin-top: 2px;
+
+
+}
+
+.SponsorsLink{
+	border-top: 0px solid #cccccc; 
+	border-right: 0px solid #cccccc;
+	border-left: 0px solid #cccccc; 
+	border-bottom: 0px solid #cccccc;
+}
+
+.SponsorsLink A:link    { color:ffffff; text-decoration:none;}
+.SponsorsLink A:visited { color:ffffff; text-decoration:none;}
+.SponsorsLink A:active  { color:ffffff; text-decoration:none;}
+.SponsorsLink A:hover   { color:ffffff; text-decoration:none;}
+	
+.RegisterLink {
+	font-size: 14px;
+	font-weight: bold;
+	color: #CC0000;
+	padding: 15px 0 10px 0;
+    }
+
+.RegisterLink A:link    {color:#CC0000; text-decoration:underline;}
+.RegisterLink A:visited {color:#CC0000; text-decoration:underline;}
+.RegisterLink A:active  {color:#CC0000; text-decoration:underline;}
+.RegisterLink A:hover   {color:#33CC00; text-decoration:underline;}
+	
+
+br {
+	clear: left;
+}
+
+p {
+	padding: 0 0 10px 0;
+	margin:0;
+}
+
+/*  OTHER STYLES */
+
+body {
+	background-repeat:x-repeat;
+	line-height:1.5em;
+	margin:0;
+	padding:0;
+	color:#525252;
+	font-family: Open Sans;
+	font-size:12px;
+	height:100%;
+	text-align: center;
+    }
+
+#maincontainer_sideR{
+	width: 1080px; /*Width of main container + right side shadow*/
+	margin: 0 auto; /*Center container on page*/
+	background-repeat:no-repeat;
+	background-position:right;
+}
+
+#maincontainer_sideL{
+	width: 1080px; /*Width of main container + left side shadow*/
+	margin: 0px auto; /*Center container on page*/
+	background-repeat:no-repeat;
+	background-position:left;
+}
+
+#maincontainer{
+	width: 1080px; /*Width of main container*/
+	margin: 0 auto; /*Center container on page*/
+	border-right:solid 1px #CCCCCC;
+	border-left:solid 1px #CCCCCC;
+	background-color:#FFFFFF;
+}
+
+#topsection{
+background: #f2f2f2;
+height: 170px; /*Height of top section*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 0px;
+}
+
+#midsection{
+	margin: 0 auto; /*Center container on page*/
+	/*border-right:solid 1px #CCCCCC;
+	border-left:solid 1px #CCCCCC;*/
+	background-color:#FFFFFF;
+}
+
+
+#footer{
+clear: left;
+width: 1080px;
+background-color:#525252;
+text-align: left;
+padding:4px 0;
+border-top:1px solid #999999;
+font-size:10px;
+line-height:normal;
+}
+
+#footer a{
+font-weight:normal;
+}
+
+.innertube{
+margin: 0;
+padding: 0;
+}
+
+/*  Registration Form STYLES */
+
+.TxtWrap {
+	width: 500px;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left:10px;
+	padding-top:5px;
+	padding-bottom: 10px;
+	padding-left:10px;
+	background-color:#FFFFFF;			
+}
+
+.Invite_TxtWrap {
+	width: 610px;
+	height: 400px;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left:10px;
+	padding-top:5px;
+	padding-bottom: 10px;
+	padding-left:10px;
+	background-color:#FFFFFF;			
+}
+
+.paraForm {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 1.15em;
+	font-weight: lighter;
+	text-transform: none;
+	color: #000000;
+	padding-top:10pt;
+	padding-bottom:0px;
+	margin-top:5px;
+	margin-bottom:0px;
+	margin-left:5px;
+	margin-right:5px;
+
+
+}
+
+.attendcolumn {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 1.15em;
+	font-weight: lighter;
+	text-transform: none;
+	color: #000000;
+}
+
+.label{
+	float: left;
+	width: 110px;
+	text-align:right;
+	clear:left;
+	margin-right: 5px;
+
+}
+
+.para {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	padding: 0px 0 0px 0;
+    }
+
+.sub_txt {
+	font-family: Open Sans;
+	font-size: 10px;
+	color: #666666;
+    }
+#maincontainer_sideL #maincontainer_sideR #maincontainer #midsection #LoginTable .LoginBG tr td .LoginBody tr td p {
+
+
+}
+.reglinks {
+	color: #0066FF;
+}
+
+.btn {
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  background: #e73859;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #b91534;
+  text-decoration: none;
+}
+
+.Heading1 {
+	font-size: 54px;
+	font-family: Open Sans; 
+	font-weight: lighter;
+	color: #525252;
+	padding: 0px 0 0px 0;
+	text-decoration:none;
+    }
+
+.Heading2 {
+	font-size: 36px;
+	font-family: Open Sans; 
+	font-weight: lighter;
+	color: #525252;
+	padding: 0px 0 0px 0;
+	text-decoration:none;
+    }
+
+.Heading3 {
+	font-size: 24px;
+	font-family: Open Sans; 
+	font-weight: lighter;
+	color: #525252;
+	padding: 0px 0 0px 0;
+	text-decoration:none;
+    }
+	
+.Heading4 {
+	font-size: 18px;
+	font-family: Open Sans; 
+	font-weight: lighter;
+	color: #525252;
+	padding: 0px 0 0px 0;
+	text-decoration:none;
+    }
+	
+.Heading5 {
+	font-size: 16px;
+	font-family: Open Sans; 
+	font-weight: lighter;
+	color: #525252;
+	padding: 0px 0 0px 0;
+	text-decoration:none;
+    }
+	
+.Heading6 {
+	font-size: 24px;
+	font-family: Open Sans; 
+	font-weight: bold;
+	color: #525252;
+	padding: 0px 0 0px 0;
+	text-decoration:none;
+    }

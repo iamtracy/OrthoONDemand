@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--*************INSERT DISCRIPTION AND KEYWORDS BELOW**********************-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!--************************************************************************-->
+<title>Registration Error</title>
+
+
+<!--Error Page Script -->
+<script language="javascript" src="https://vts.inxpo.com/cfr/scripts/XBrowser.js"></script>
+
+<script>
+
+function window_onload() 
+{
+  GetUrlParameters(); 
+	window.top.scrollTo(0,"reg_top");
+}
+
+function GetUrlParameters() 
+{ 
+	var cError = unescape(GetURLParamValue("ErrorMsg"));
+  if (cError && cError != "")
+    document.getElementById('HiddenFrame').innerHTML = '<span class="">'+cError+'</span><br><br>';
+    
+  var cShowKey = GetURLParamValue("ShowKey");
+  if (cShowKey && cShowKey != "")
+    document.getElementById("BackLink").href += "&ShowKey=" + cShowKey;
+} 
+
+</script>
+<style>
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#007dc2;
+	
+}
+
+a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#007dc2;
+	font-weight:bold;
+}
+</style>
+
+</head>
+
+<body onLoad="window_onload()">
+
+         
+<script language="JavaScript">
+		document.write('<div id="HiddenFrame" name="HiddenFrame" ></div>');
+</script>
+
+<p>We’re sorry that you’re experiencing difficulties registering for the Medical Packaging Community. <br /><br />
+
+If you click on the link below you will be directed to a login page where you enter your email address and the general password of MPC2014. Should you experience any future difficulties, feel free to contact <a href="mailto: tanya.vongrumbkow@ubm.com">tanya.vongrumbkow@ubm.com</a> and she will assist you. <br /><br />
+Login page: <a href="https://vts.inxpo.com/Launch/Event.htm?ShowKey=6602">https://vts.inxpo.com/Launch/Event.htm?ShowKey=6602</a><br /><br /><a id="BackLink" href="https://vts.inxpo.com/scripts/Server.nxp?LASCmd=AI:4;F:QS!10100"> Back to Registration</a></p>
+            
+
+</body>
+</html>

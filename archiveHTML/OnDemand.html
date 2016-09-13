@@ -1,0 +1,1309 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ortho OnDemand: Available on Demand</title>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href="assets/css/main.css" rel="stylesheet" type="text/css">
+
+<!-- JQUERY CSS -->
+<link href="assets/jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="assets/jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<!-- END JQUERY CSS -->
+
+<!-- SCRIPTS -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--<script type="text/javascript" src="jQueryAssets/jquery-1.11.1.min.js"></script>-->
+<script type="text/javascript">
+
+</script>
+<script language="javascript">
+
+var g_AffiliateKey = GetURLParamValue("AffiliateKey");
+var g_AffiliateData = GetURLParamValue("AffiliateData");
+
+/********UPDATE QUICK REGISTRATION LINK BETWEEN SINGLE QUOTES********/
+var g_iFrameRegUrlSrc = 'https://vts.inxpo.com/scripts/Server.nxp?LASCmd=AI:4;F:APIUTILS!51004&PageID=2C78C654-F796-4301-B55A-9E9D92D63196'; 
+var g_iFrameRegFinalUrlSrc = g_iFrameRegUrlSrc + '?AffiliateData=' + g_AffiliateData;
+
+var g_HomeUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/home.html';
+var g_HomeFinalUrlSrc = g_HomeUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_AgendaUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/Upcoming.html';
+var g_AgendaFinalUrlSrc = g_AgendaUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_SpeakersUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/OnDemand.html';
+var g_SpeakersFinalUrlSrc = g_SpeakersUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_SponsorsUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LoginPage.html';
+var g_SponsorsFinalUrlSrc = g_SponsorsUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_FAQUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LoginPageCL.html';
+var g_FAQFinalUrlSrc = g_FAQUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_ContactUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/PrivacyPolicy.html';
+var g_ContactFinalUrlSrc = g_ContactUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_Contac2tUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LegalNotice.html';
+var g_Contact2FinalUrlSrc = g_Contact2UrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_RegistrationUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/registration.html';
+var g_RegistrationFinalUrlSrc = g_RegistrationUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+function GetURLParamValue(cParamName) {	
+  var cHRef = window.location.href;
+  var iPos = cHRef.indexOf("?");
+  if (iPos > -1)
+    {
+      cHRef = cHRef.substr(iPos+1);
+
+      var aValues = cHRef.split("&");
+      var aParamInfo;
+
+      for (var iLup = 0; iLup < aValues.length; iLup++)
+        {
+          aParamInfo = aValues[iLup].split("=");
+          if (aParamInfo && aParamInfo[0] == cParamName)
+            return aParamInfo[1]; 
+        }
+    }
+
+  return "";
+}
+
+function window_onload() {
+if(g_AffiliateKey || g_AffiliateData == "undefined"){
+document.getElementById("QRegFrame").src = g_FinalUrlSrc;
+document.getElementById("HomeLink").href = g_HomeFinalUrlSrc;
+	document.getElementById("AgendaLink").href = g_AgendaFinalUrlSrc;
+
+	document.getElementById("SpeakersLink").href = g_SpeakersFinalUrlSrc;
+document.getElementById("SponsorsLink").href = g_SponsorsFinalUrlSrc;
+document.getElementById("FAQLink").href = g_FAQFinalUrlSrc;
+document.getElementById("ContactLink").href = g_ContactFinalUrlSrc;
+document.getElementById("Contact2Link").href = g_Contact2FinalUrlSrc;
+document.getElementById("RegLink").href = g_RegistrationFinalUrlSrc;
+
+    }else {
+document.getElementById("QRegFrame").src = g_UrlSrc;
+document.getElementById("HomeLink").href = g_HomeUrlSrc;
+document.getElementById("AgendaLink").href = g_AgendaUrlSrc;
+document.getElementById("SpeakersLink").href = g_SpeakersUrlSrc;
+document.getElementById("SponsorsLink").href = g_SponsorsUrlSrc;
+document.getElementById("FAQLink").href = g_FAQUrlSrc;
+document.getElementById("ContactLink").href = g_ContactUrlSrc;
+document.getElementById("Contact2Link").href = g_Contact2UrlSrc;
+document.getElementById("RegLink").href = g_RegistrationUrlSrc;
+    }  
+}
+
+</script>
+
+<!-- END SCRIPTS -->
+<style>ul.TickList {
+  list-style-image: url('https://content.inxpo.com/FileLibrary/1416/22/check.jpg')
+}</style>
+</head>
+
+<body onload="window_onload()">
+
+<div id="main-container">
+
+  <!-- HEADER -->
+  <div id="header-container">
+    <div class="header-img">
+      <a href="home.html"><img src="assets/img/HeaderImage.jpg" width="275" height="100" alt=""/></a>
+    </div>
+    <div class="header-navbar">
+   <a href="home.html" id="OverviewLink">About</a>
+      <a href="Upcoming.html" id="AgendaLink">Upcoming Events</a>
+      <a href="OnDemand.html" class="navbar-current" id="SpeakersLink">Available ON DEMAND</a>
+      <a href="LoginPage.html" id="FAQLink">Login</a>
+      <a href="registration.html" class="btn" id="RegLink">Register</a>
+    </div>
+  </div>
+  <!-- END HEADER -->
+  
+  <!-- MIDDLE CONTENT -->
+  <div id="middle-container">
+    <div class="Heading1">Available on Demand</div>
+     <div class="middle-content">
+      <p>What best practices are in place in other laboratories around the world? What are the latest trends in the fields of transfusion medicine and chemistry & immunodiagnostics? Learn from our impressive line-up of key opinion leaders, and stay up-to-date on industry trends and best practices.</p>
+      
+      <div class="Heading4 bottom-border">Past Events Available ON DEMAND</div>
+
+   
+      <p><img src="https://content.inxpo.com/FileLibrary/1416/22/CLicon.jpg" height="28" alt=""/>
+      <em>Chemistry & Immunodiagnostics</em>
+      <p>Is Repair After Acute Kidney Injury (AKI) Linked to
+Long-Term Outcomes? <br />
+        <strong>On Demand since 02/09/16</strong></p>
+      <p>&nbsp;</p>
+      <p> <strong>Presented by</strong> </p>      
+      
+      <!-- ACCORDION -->
+      <div class="accordion-menu">
+        <input type="checkbox" class="read-more-state" id="post-2" />
+        <ul class="read-more-wrap">
+         <li>
+            <div class="accordion">
+              <!-- Panel 12 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-12">
+
+                <label for="panel-12">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/Kellum.png" style="padding: 3px;" width="105" />
+                <p class="Heading6">Dr. John A. Kellum</p>
+                <p class="Heading5"><strong>Director, Center for Critical Care Nephrology<br>
+University of Pittsburgh Medical Center </strong></p>
+                </label>
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Dr. John A. Kellum<br>
+
+Director, Center for Critical Care Nephrology<br>
+University of Pittsburgh Medical Center</p></div>
+                </div>
+                
+              </div>
+
+            
+
+             
+          </li>
+        <!-- .accordion -->   
+             <li class="read-more-target">
+               <p><img src="https://content.inxpo.com/FileLibrary/1416/22/CLicon.jpg" height="28" alt=""/> <em>Chemistry & Immunodiagnostics</em>
+               <p>National Surgical Quality Improvement Program Underestimates Risk Associated with Mild & Moderate Postoperative AKI<br />
+                 <strong>On Demand since 12/17/15</strong></p>
+               <p> <strong>Presented by</strong></p>
+            
+         <div class="accordion">
+              <!-- Panel 13 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-13">
+                <label for="panel-13">
+           <img src="https://content.inxpo.com/FileLibrary/1416/6/Azra-Bihorac.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Dr. Azra Bihorac, MD, MS, FCCM</p>
+                <p class="Heading5"><strong>Associate Professor of Anesthesiology, Medicine, and Surgery<br>University of Florida, College of Medicine  </strong></p>
+                </label>
+
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Dr. Azra Bihorac, MD, MS, FCCM<br>
+
+Associate Professor of Anesthesiology, Medicine, and Surgery<br>University of Florida, College of Medicine </p>
+                </div>
+              </div>
+              
+    <!-- Panel 14 -->
+         
+              <div>
+                <input type="checkbox" name="panel" id="panel-14">
+                <label for="panel-14">
+           <img src="https://content.inxpo.com/FileLibrary/1416/6/Charles_E_Hobson.jpg" style="padding: 3px;" height="105" width="105" />
+                <p class="Heading6">Dr. Charles E. Hobson</p>
+                  <p class="Heading5"><strong>Surgical Intensivist, 
+Malcom Randall VA Medical Center
+</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Dr. Charles E. Hobson<br />
+Surgical Intensivist <br />
+Malcom Randall VA Medical Center </p>
+                </div>
+              </div>
+              
+
+         
+              
+   
+                        
+              </div>
+
+          
+              
+    
+            <!-- .accordion -->   
+             <li class="read-more-target">
+               <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em>
+               <p>AABB 2015 Retrospective Webcast
+<strong>On Demand since 12/16/15</strong>               </p>
+               <p> <strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 15 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-15">
+                <label for="panel-15">
+           <img src="https://content.inxpo.com/FileLibrary/1416/6/Evaspnew.png" width="105" height="105" alt=""/>
+                <p class="Heading6">Eva Quinley- MS, MT(ASCP)SBB</p>
+                <p class="Heading5"><strong>Chief Operating Officer, MEDIC Regional Blood Center </strong></p>
+                </label>
+
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Joining New York Blood Center in August, 2010, Eva Quinley is the Senior Vice President of Quality and Regulatory Affairs with responsibilities for all quality systems and compliance, environmental health and safety and training. She is a Specialist in Blood Banking with over  35 years of experience in the blood banking industry.  Eva holds a masters degree in Healthcare Administration and Education from the University of Memphis and a BS in Medical Technology from the University of Tennessee, Memphis.  She is a Specialist in Blood Banking and ASQ Certified Quality Auditor.  She currently serves as Chair of the Transfusion Medicine Section Coordinating Committee for AABB and is a member of the AABB Board of Directors.  Eva has published numerous articles and most recently the 3rd edition of her blood banking textbook, Immunohematology:  Principles and Practice, was released.  She is nationally and internationally known as an established trainer, speaker, and resource for technical and quality/regulatory issues within the blood banking and plasma industries.  She resides in Knoxville, Teneessee.</p>
+                </div>
+              </div>
+              
+    <!-- Panel 16 -->
+         
+              <div>
+                <input type="checkbox" name="panel" id="panel-16">
+                <label for="panel-16">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/SueTsp.png" width="105" height="105" alt=""/>
+                  <p class="Heading6">Susan Johnson- MS, TM, MT(ASCP)SBB</p>
+                  <p class="Heading5"><strong>Director of Clinical Education, Blood Center of Wisconsin</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">
+                    Sue Johnson is the Director of Clinical Education at BloodCenter of Wisconsin and serves as Director of BloodCenter of Wisconsin&rsquo;s Specialist in Blood Banking (SBB) Program. She has taken an active role in the education of Medical Laboratory Science students for over 20 years. Sue has also authored numerous publications in the field of Transfusion Medicine and Immunohematology and is an established lecturer on a national and international basis on the topic of Immunohematology. She is a member of the Invitational Conference of Investigative Immunohematologists (ICII). She has been an active member of AABB for over 25 years. She served as Chair of the organization&rsquo;s Membership &amp; Elections Committee and Immunohematology Reference Laboratory Accreditation Program Unit. Sue currently sits on the AABB Press Editorial Board and Molecular Testing Standards Program Unit and is an Assessor for the Accreditation Program.</p>
+                </div>
+              </div>
+              
+
+              <!-- Panel 17 -->
+              
+              <div>
+                <input type="checkbox" name="panel" id="panel-17">
+                <label for="panel-17">
+                  <img src="https://content.inxpo.com/FileLibrary/1416/6/Mary_Lieb.jpg" width="105" height="105" alt=""/>
+                  <p class="Heading6"> 	Mary Lieb- BS MT(ASCP) SBB, CQA(ASQ)</p>
+                  <p class="Heading5"><strong>Director of Quality Source, Blood Systems</strong></p>
+                </label>
+               
+                <div class="accordion__content">
+                  <p class="accordion__body">
+                    Mary Lieb- BS MT(ASCP) SBB, CQA(ASQ)<br>
+Director of Quality Source, Blood Systems 
+                  </p>
+                </div>
+              </div>
+              
+   
+              <!-- Panel 18 -->
+              
+              <div>
+                <input type="checkbox" name="panel" id="panel-18">
+                <label for="panel-18">
+                  <img src="https://content.inxpo.com/FileLibrary/1416/6/Althea_Rossier.jpeg" width="105" height="105" alt=""/>
+                  <p class="Heading6">Althea Rassier- MLS(ASCP)SBBcm</p>
+                  <p class="Heading5"><strong>SBB Student, BloodCenter of Wisconsin </strong></p>
+                </label>
+               
+                <div class="accordion__content">
+                  <p class="accordion__body">
+                    	Althea Rassier- MLS(ASCP)SBBcm<br>
+SBB Student, BloodCenter of Wisconsin 
+                  </p>
+                </div>
+              </div>                  
+              </div>
+
+          
+              
+            <!-- .accordion -->   
+          <li class="read-more-target">
+               <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em>
+               <p>Integrating Automation into the Laboratory: Challenges and Best Practices <br />
+                 <strong>On Demand since 06/24/15</strong></p>
+               <p> Join your colleagues for an Ortho ON DEMAND peer-to-peer live chat on reactive 
+                 vs. proactive approaches to the threat of transfusion-transmitted pathogens. We’ll be 
+                 discussing an article in The New England Journal of Medicine on the topic. In their article, 
+                 The Safety of the Blood Supply—Time to Raise the Bar Edward Snyder et al. argue that 
+                 the time has come for a proactive pathogen reduction approach, mandated by the federal 
+                 government. </p>
+               <p> <strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 19 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-19">
+                <label for="panel-19">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/CarinaEdberg.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Carina Edberg</p>
+                <p class="Heading5"><strong>Biomedical Laboratory Scientist, Uppsala University Hospital<br>
+                  MSc Biomedical Laboratory Science, Uppsala University</strong></p>
+                </label>
+
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Carina oversees automated transfusion analysis in the routine laboratory of the Department of Immunohematology at Uppsala University Hospital. </p>
+                </div>
+              </div>
+              
+         
+              </div>
+
+          
+              
+           
+            <!-- .accordion -->
+          </li>       
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/>
+      <em>Transfusion Medicine</em>
+      <p>
+        A Proactive Approach to Blood Supply Safety <br />
+        <strong>On Demand since 06/01/15</strong>
+      </p>
+      <p>
+        Join your colleagues for an Ortho ON DEMAND peer-to-peer live chat on reactive 
+vs. proactive approaches to the threat of transfusion-transmitted pathogens. We’ll be 
+discussing an article in The New England Journal of Medicine on the topic. In their article, 
+The Safety of the Blood Supply—Time to Raise the Bar Edward Snyder et al. argue that 
+the time has come for a proactive pathogen reduction approach, mandated by the federal 
+government. </p>
+      <p>
+        <strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 20 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-20">
+                <label for="panel-20">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/Tony-Casina.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Tony Casina</p>
+                  <p class="Heading5"><strong>Marketing Manager, Ortho-Clinical Diagnostics</strong></p>
+                </label>
+
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Tony has over 35 years of experience in the blood banking industry. Much of this time has been 
+spent in the commercial blood bank reagent manufacturer sector, but he has also worked as a hospital 
+transfusion service medical technologist in at least a part-time role. Tony has provided technical 
+support to laboratories throughout the world, utilizing Ortho's reagents and immunohematology 
+test systems. He has tested some of the most challenging antibodies problems as part of his reference 
+laboratory experience. Tony has been active in transfusion medicine, participating in the AABB 
+by serving on committees and presenting at AABB meetings and regional blood bank meeting 
+educational programs. For the past 12 years, Tony has worked in World Wide Marketing for Ortho 
+Clinical Diagnostics. In his current position as marketing manager, immunohematology, he is 
+involved in new systems and technical marketing on a global basis. </p>
+                </div>
+              </div>
+              
+         
+              </div>
+
+          
+              
+           
+            <!-- .accordion -->
+          </li>
+           <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>How to Manage Rh Typing in Obstetric Patients<br />
+            <strong>On Demand since 03/31/15</strong></p>
+            <p>Join your colleagues in a peer-to-peer chat, and share your views about Dr. Richard Haspel 
+and Dr. Connie Westhoff ’s article, “How do I manage Rh typing in obstetric patients?” 
+published in the March 2015 issue of TRANSFUSION.</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 21 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-21">
+                <label for="panel-21">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/Tony-Casina.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Tony Casina</p>
+                  <p class="Heading5"><strong>Marketing Manager, Ortho-Clinical Diagnostics</strong></p>
+                </label>
+
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Tony has over 35 years of experience in the blood banking industry. Much of this time has been 
+spent in the commercial blood bank reagent manufacturer sector, but he has also worked as a hospital 
+transfusion service medical technologist in at least a part-time role. Tony has provided technical 
+support to laboratories throughout the world, utilizing Ortho's reagents and immunohematology 
+test systems. He has tested some of the most challenging antibodies problems as part of his reference 
+laboratory experience. Tony has been active in transfusion medicine, participating in the AABB 
+by serving on committees and presenting at AABB meetings and regional blood bank meeting 
+educational programs. For the past 12 years, Tony has worked in World Wide Marketing for Ortho 
+Clinical Diagnostics. In his current position as marketing manager, immunohematology, he is 
+involved in new systems and technical marketing on a global basis. </p>
+                </div>
+              </div>
+              
+         
+              </div>
+
+          
+              
+           
+            <!-- .accordion -->
+          </li>          
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>Quality Improvement with Electronic Cross-Match<br />
+            <strong>On Demand since 02/25/15</strong></p>
+            <p>This presentation discusses the historical evolution of the cross-match method, the benefits and limitations of electronic cross-match, and the ways in which it can improve efficiency without compromising turn-around time</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 22 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-22">
+                <label for="panel-22">
+                  <img src="https://content.inxpo.com/FileLibrary/1416/6/DrChang105x105.jpg" width="105" height="105" alt=""/>
+                  <p class="Heading6">Dr. Shelley Chang</p>
+                  <p class="Heading5"><strong>Transfusion Medicine Fellow, UCLA</strong></p>
+                </label>
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">
+                    Dr. Chang is an active advocate of advancing the field of health care and transfusion practice through public health efforts within the hospital, local community, and abroad. She is an active champion for improved patient outcomes through evidence based and data-drive clinical decision making in transfusion practices.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Panel 23 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-23">
+                <label for="panel-23">
+                  <img src="https://content.inxpo.com/FileLibrary/1416/6/Dr_Zyman105x105.jpg" width="105" height="105" alt=""/>
+                  <p class="Heading6">Dr. Alyssa Ziman, MD</p>
+                  <p class="Heading5"><strong>Director of Transfusion Medicine, UCLA Health</strong></p>
+                </label>
+                <div class="accordion__content">
+                <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Alyssa Ziman, MD is Director of Transfusion Medicine in the Department of Pathology and Laboratory Medicine at UCLA Health. Dr. Ziman is also Associate Clinical Professor of Pathology at the David Geffen School of Medicine at the University of California, Los Angeles (UCLA). Additionally, she is Director of the Transfusion Medicine Fellowship Program and Associate Director of the Pathology and Laboratory Medicine Residency Program at UCLA. Dr. Ziman&rsquo;s research focuses on immunohematology, transfusion practice and patient safety, as well as donor safety and motivating factors in blood donors. In addition, she is a member of the Biomedical Excellence for Safer Transfusion (BEST) Collaborative, an international research group. She has written numerous articles for peer-reviewed publications. Board certified in anatomic and clinical pathology and blood banking/transfusion medicine, Dr. Ziman is a member of several professional societies, and she is a member of the Medical and Technical Advisory Committee for the Blood Center of California.</p>
+                </div>
+              </div>
+
+              <!-- Panel 24 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-24">
+                <label for="panel-24">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+
+              <!-- Panel 25 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-25">
+                <label for="panel-25">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+              
+            </div>
+            <!-- .accordion -->
+          </li>
+                
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>AABB 2014 Retrospective Webcast<br />
+              <strong>On Demand since 12/11/14</strong>
+            </p>
+            <p>Hear from key opinion leaders who attended the 2014 AABB Convention in Philadelphia, 
+PA, as they discuss today’s top issues in blood management and techniques that 
+organizations have used to change transfusion practices.</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 26 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-26">
+                <label for="panel-26">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/Tony-Casina.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Tony Casina</p>
+                <p class="Heading5"><strong>Marketing Manager, Ortho-Clinical Diagnostics</strong></p>
+                </label>
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Tony has over 35 years of experience in the blood banking industry. Much of this time has been 
+spent in the commercial blood bank reagent manufacturer sector, but he has also worked as a hospital 
+transfusion service medical technologist in at least a part-time role. Tony has provided technical 
+support to laboratories throughout the world, utilizing Ortho's reagents and immunohematology 
+test systems. He has tested some of the most challenging antibodies problems as part of his reference 
+laboratory experience. Tony has been active in transfusion medicine, participating in the AABB 
+by serving on committees and presenting at AABB meetings and regional blood bank meeting 
+educational programs. For the past 12 years, Tony has worked in World Wide Marketing for Ortho 
+Clinical Diagnostics. In his current position as marketing manager, immunohematology, he is 
+involved in new systems and technical marketing on a global basis. </p>
+                </div>
+              </div>
+              
+              <!-- Panel 27 -->
+              <div>
+               <!-- <input type="checkbox" name="panel" id="panel-27">
+                <label for="panel-27">
+                        <img src="https://content.inxpo.com/FileLibrary/1416/6/Dr_Zyman105x105.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Dr. Alyssa Ziman, MD</p>
+                <p class="Heading5"><strong>Director of Transfusion Medicine, UCLA Health</strong></p>
+                </label>-->
+              </div>
+
+              <!-- Panel 28 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-28">
+                <label for="panel-28">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+              
+              <!-- Panel 29 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-29">
+                <label for="panel-29">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->              
+
+              <!-- Panel 30 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-30">
+                <!--<label for="panel-30">Panel 4</label>-->
+                <!--
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
+                </div>
+                -->
+              </div>
+              
+            </div>
+            <!-- .accordion -->
+          </li>
+                
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>Bridging the Generational Divide<br />
+              <strong>On Demand since  11/12/14</strong>
+            </p>
+            <p>The presentation will discuss the white paper, “Bridging the Generational Divide,” which 
+defines the characteristics of four distinct generations in the workplace and explores 
+strategies for effective multi-generational management in the lab.</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 31 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-31">
+                <label for="panel-31">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/AS-photo.png" width="105" height="105" alt=""/>
+                <p class="Heading6">Ann Steiner</p>
+                <p class="Heading5"><strong>Transfusion Technical Specialist, Ortho Clinical Diagnostics</strong></p>
+                </label>
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Ann Steiner is a transfusion technical specialist at Ortho Clinical Diagnostics. Previously, she served 
+as the supervisor of the AABB Reference Laboratory at the University of Michigan, an instructor 
+at Eastern Michigan University, and chair of the AABB Committees on Reference Laboratories and 
+the Rare Donor File. She is actively involved in all aspects of transfusion medicine serology, with 
+an emphasis on Gel Technology and its automation, and has been published in journals including 
+Transfusion and Immunohematology. She holds a bachelor’s degree in medical technology from 
+Indiana University and was accredited as a specialist in blood banking by ASCP&AABB.</p>
+                </div>
+              </div>
+              
+              <!-- Panel 32 -->
+              <div>
+               <input type="checkbox" name="panel" id="panel-32">
+                <label for="panel-32">
+                        <img src="https://content.inxpo.com/FileLibrary/1416/6/PP_Photo.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Paula Pattison</p>
+                <p class="Heading5"><strong>Principal Scientist, Ortho Clinical Diagnostics</strong></p>
+                </label><div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">A 41 year experienced professional in transfusion medicine, Paula has devoted her entire career  
+to the patient and to the donor, stridently advocating for optimal transfusion outcomes.
+During college and early in her career, Paula worked in hospital transfusion services of all sizes. 
+She left hospital practice to manage the advanced reference laboratory at the American Red 
+Cross in Rochester, NY . She was serving as the Director of Regional Laboratory Operations at 
+the ARC just prior to joining OCD. Her positions at Ortho Clinical Diagnostics include: OCD 
+Sales: Immunohematology Territory Manager with a focus on launching the Gel Technology 
+in the US; OCD Worldwide Marketing: IH Product Director; OCD Product Support Operations: 
+Principal Scientist IH Field Triage; OCD Assay R&D: Principal Scientist; and OCD Worldwide New 
+Product Design Quality: Principal Scientist, Subject Matter Expert, Clinical Immunohematology, 
+her current position. <br><br>
+Education/Certifications: AS Math/Science: Corning Community College; BS Medical Technology: 
+State University of New York at Buffalo; MBA: Simon EDP University of Rochester; MT(ASCP)SBB; 
+and a Licensed Medical Technologist NYS
+Awards and Recognition: President’s Trophy, Ortho Clinical Diagnostics, a Johnson & Johnson 
+Company; Science & Technology Leadership, Ortho Clinical Diagnostics, a Johnson & Johnson 
+Company; Standards of Leadership, Ortho Clinical Diagnostics, a Johnson & Johnson Company; 
+Special Recognition Awards (awarded for Leadership & Significant Contributions) 
+Ortho Clinical Diagnostics, a Johnson & Johnson Company; Outstanding Alumnus of the Year, 
+State University of New York at Buffalo, Dept. of Clinical Laboratory Science; Alumni Service Award, 
+William E. Simon School of Business Administration, University of Rochester</p>
+                </div>
+              </div>
+
+              <!-- Panel 33 -->
+             
+              <div>
+                <input type="checkbox" name="panel" id="panel-33">
+                <label for="panel-33">
+                 <img src="https://content.inxpo.com/FileLibrary/1416/6/Tony-Casina.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Tony Casina</p>
+                <p class="Heading5"><strong>Marketing Manager, Ortho-Clinical Diagnostics</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+              <p class="accordion__body">Tony has over 35 years of experience in the blood banking industry. Much of this time has been 
+spent in the commercial blood bank reagent manufacturer sector, but he has also worked as a hospital 
+transfusion service medical technologist in at least a part-time role. Tony has provided technical 
+support to laboratories throughout the world, utilizing Ortho's reagents and immunohematology 
+test systems. He has tested some of the most challenging antibodies problems as part of his reference 
+laboratory experience. Tony has been active in transfusion medicine, participating in the AABB 
+by serving on committees and presenting at AABB meetings and regional blood bank meeting 
+educational programs. For the past 12 years, Tony has worked in World Wide Marketing for Ortho 
+Clinical Diagnostics. In his current position as marketing manager, immunohematology, he is 
+involved in new systems and technical marketing on a global basis. </p>
+                </div>
+                </div>
+              </div>
+              
+              
+              <!-- Panel 34 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-34">
+                <label for="panel-34">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->              
+
+              <!-- Panel 35 -->
+              <div>
+               <!-- <input type="checkbox" name="panel" id="panel-35">-->
+                <!--<label for="panel-35">Panel 4</label>-->
+                <!--
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
+                </div>
+                -->
+              </div>
+              
+           
+            <!-- .accordion -->
+          </li>
+                
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>Efficiency, Safety and Automation: A 20-Year Journey<br />
+              <strong>On Demand since  10/15/14</strong>
+            </p>
+            <p>Learn how the practice of transfusion in the UK has changed over the last 20 years, 
+examining the entire process, from taking blood samples to testing in the laboratory to 
+transfusing on the ward to recording any adverse effect</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 36 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-36">
+                <label for="panel-36">
+                <table border="0">
+                  <tbody>
+                    <tr>
+                      <td><img src="https://content.inxpo.com/FileLibrary/1416/6/jwallissp.png" width="105" height="105" alt=""/></td>
+                      <td><p class="Heading6">Dr. Jonathan Wallis</p>
+                <p class="Heading5"><strong>Consultant Clinical Haematologist, Honorary Senior 
+Lecturer,<br>Freeman Hospital, Newcastle, UKaav</strong></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+             
+                
+                </label>
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Dr. Jonathan Wallis is a clinical haematologist with a typical non-transplant case mix, with a keen 
+interest in both laboratory haematology and clinical blood transfusion. His publications include 
+studies on risk assessments for electronic issue, leucodepletion and post-operative infection, 
+transfusion- related acute lung injury, transfusion epidemiology, long-term survival after 
+transfusion and the Tag & Label system for blood administration. He is currently researching 
+effects of the age of blood.<br><br>
+Dr. Wallis trained at Oxford University and Westminster Hospital. Following training posts 
+at Westminster Children’s, Exeter, St Mary’s (London) and Newcastle upon Tyne Hospitals, he was 
+appointed consultant haematologist at Freeman Hospital, Newcastle upon Tyne in 1990. He was 
+a member of the Blood Stocks project group and subsequent steering group until 2003, chairman 
+of the Northern Regional Transfusion Committee and member of the National Transfusion 
+Committee from 2000–2006 and chairman of the hospital-based transfusion practice SIG of the 
+BBTS from 2004–2009. He is an associate editor of Transfusion Medicine, chair of BBTS meetings 
+committee and chair of ISBT working party on clinical blood transfusion. </p>
+                </div>
+              </div>
+              
+              <!-- Panel 37 -->
+              <div>
+               <!-- <input type="checkbox" name="panel" id="panel-37">
+                <label for="panel-37">
+                        <img src="https://content.inxpo.com/FileLibrary/1416/6/Dr_Zyman105x105.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Dr. Alyssa Ziman, MD</p>
+                <p class="Heading5"><strong>Director of Transfusion Medicine, UCLA Health</strong></p>
+                </label>-->
+              </div>
+
+              <!-- Panel 38 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-38">
+                <label for="panel-38">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+              
+              <!-- Panel 39 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-39">
+                <label for="panel-39">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->              
+
+              <!-- Panel 40 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-40">
+                <!--<label for="panel-40">Panel 4</label>-->
+                <!--
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
+                </div>
+                -->
+              </div>
+              
+            </div>
+            <!-- .accordion -->
+          </li>
+                
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>Differentiating Warm Autoimmune vs. Drug-Induced Immune Hemolytic Anemiat<br />
+              <strong>On Demand since  9/15/14</strong>
+            </p>
+            <p>Learn from expert Susan T. Johnson as she describe the initial serologic results observed in 
+a patient with warm autoimmune hemolytic anemia (WAIHA) and drug-induced immune 
+hemolytic anemia (DIIHA). She will explain the serologic test results that differentiate 
+WAIHA from DIIHA and list drugs most commonly associated today with drug-induced 
+immune hemolytic anemia.</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 41 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-41">
+                <label for="panel-41">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/SueTsp.png" width="105" height="105" alt=""/>
+                <p class="Heading6">Susan T. Johnson</p>
+                <p class="Heading5"><strong>MSTM, MT(ASCP)SBB, Director, Clinical Education, 
+BloodCenter of Wisconsin</strong></p>
+                </label>
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Sue Johnson is the Director of Clinical Education at BloodCenter of Wisconsin and serves 
+as Director of BloodCenter of Wisconsin’s Specialist in Blood Banking (SBB) Program. She 
+has taken an active role in the education of Medical Laboratory Science students for over 20 
+years. Sue has also authored numerous publications in the field of Transfusion Medicine 
+and Immunohematology and is an established lecturer on a national and international basis 
+on the topic of Immunohematology. She is a member of the Invitational Conference of 
+Investigative Immunohematologists (ICII). She has been an active member of AABB for over 
+25 years. She served as Chair of the organization’s Membership & Elections Committee and 
+Immunohematology Reference Laboratory Accreditation Program Unit. Sue currently sits 
+on the AABB Press Editorial Board and Molecular Testing Standards Program Unit and is an 
+Assessor for the Accreditation Program.</p>
+                </div>
+              </div>
+              
+              <!-- Panel 42 -->
+              <div>
+               <!-- <input type="checkbox" name="panel" id="panel-42">
+                <label for="panel-42">
+                        <img src="https://content.inxpo.com/FileLibrary/1416/6/Dr_Zyman105x105.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Dr. Alyssa Ziman, MD</p>
+                <p class="Heading5"><strong>Director of Transfusion Medicine, UCLA Health</strong></p>
+                </label>-->
+              </div>
+
+              <!-- Panel 43 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-43">
+                <label for="panel-43>
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+              
+              <!-- Panel 44 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-44">
+                <label for="panel-44">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->              
+
+              <!-- Panel 45 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-45">
+                <!--<label for="panel-45">Panel 4</label>-->
+                <!--
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
+                </div>
+                -->
+              </div>
+              
+            </div>
+            <!-- .accordion -->
+          </li>
+                
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>Becoming the Leader You Want to Be<br />
+              <strong>On Demand since  7/24/14</strong>
+            </p>
+            <p>The question: “Are leaders born to lead” is one that is often asked. While some people 
+may be born to lead, most of us have to learn how to lead. Fortunately, leadership is a 
+skill that can be learned.  Leaders have certain characteristics and behaviors that allow 
+them to influence others that allow them to lead others. According to John Maxell, there 
+are five levels of leadership: position, permission, production, people development and 
+personhood. Each of these has a different level of importance. Another question along these 
+lines that is also asked is: “Are leadership and management the same thing?” The answer to 
+thiws question is no. Leadership and management are different. Leadership is about people; 
+management about projects. Leadership is about vision; management is about executing to 
+achieve that vision. This presentation discusses the various ways in which leaders influence 
+others and also differentiates leadership and management in a clear way.</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 46 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-46">
+                <label for="panel-46">
+                <table border="0">
+                  <tbody>
+                    <tr>
+                      <td><img src="https://content.inxpo.com/FileLibrary/1416/6/Evaspnew.png" width="105" height="105" alt=""/></td>
+                      <td>   <p class="Heading6">Eva D. Quinley</p>
+                <p class="Heading5"><strong>MS, MT(ASCP)SBB, Senior Vice President, Quality & 
+Regulatory Affairs,<br>New York Blood Center </strong></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+             
+                </label>
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Joining New York Blood Center in August, 2010, Eva Quinley is the senior vice president 
+of quality and regulatory affairs with responsibilities for all quality systems and compliance, 
+environmental health and safety and training. She is a specialist in blood banking with more than 
+35 years of experience in the blood banking industry. <br><br>
+Eva holds a master’s degree in healthcare administration and education from the University 
+of Memphis and a BS in medical technology from the University of Tennessee, Memphis. She 
+is a specialist in blood banking and ASQ-certified quality auditor. She currently serves as chair 
+of the Transfusion Medicine Section Coordinating Committee for AABB and is a member of 
+the AABB Board of Directors. Eva has published numerous articles and most recently released 
+the third edition of her blood banking textbook, Immunohematology: Principles and Practice. 
+She is nationally and internationally known as an established trainer, speaker and resource for 
+technical and quality/regulatory issues within the blood banking and plasma industries. She 
+resides in Knoxville, Tennessee.</p>
+                </div>
+              </div>
+              
+              <!-- Panel 47 -->
+              <div>
+               <!-- <input type="checkbox" name="panel" id="panel-47">
+                <label for="panel-47">
+                        <img src="https://content.inxpo.com/FileLibrary/1416/6/Dr_Zyman105x105.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Dr. Alyssa Ziman, MD</p>
+                <p class="Heading5"><strong>Director of Transfusion Medicine, UCLA Health</strong></p>
+                </label>-->
+              </div>
+
+              <!-- Panel 48 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-48">
+                <label for="panel-48">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+              
+              <!-- Panel 49 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-49">
+                <label for="panel-49">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->              
+
+              <!-- Panel 50 -->
+              <div>
+              <!--  <input type="checkbox" name="panel" id="panel-50">-->
+                <!--<label for="panel-50">Panel 4</label>-->
+                <!--
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
+                </div>
+                -->
+              </div>
+              
+            </div>
+            <!-- .accordion -->
+          </li>
+                
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>Quality, It’s More than Compliance<br />
+              <strong>On Demand since  5/21/14</strong>
+            </p>
+            <p>Many individuals view quality as just complying with the rules – a very short sighted view 
+of quality and one that doesn’t work. True quality is so much more; it takes into account not 
+only effectiveness of a process but also the efficiency of executing that process. In today’s 
+environment where our resources are limited, being both efficient and effective is critical.  
+Quality should provide oversight as it traditionally has but just as important, it should 
+provide guidance and support to our business, helping us to find better ways to accomplish 
+
+
+our goals and helping us to gain those efficiencies. Taking steps toward true quality means 
+ensuring we have open communication and that we are all accountable. This presentation 
+highlights the aspects of becoming a true quality organization.</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 51 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-51">
+                <label for="panel-51">
+               <table border="0">
+                  <tbody>
+                    <tr>
+                      <td><img src="https://content.inxpo.com/FileLibrary/1416/6/Evaspnew.png" width="105" height="105" alt=""/></td>
+                      <td>   <p class="Heading6">Eva D. Quinley</p>
+                <p class="Heading5"><strong>MS, MT(ASCP)SBB, Senior Vice President, Quality & 
+Regulatory Affairs,<br>New York Blood Center </strong></p></td>
+                    </tr>
+                  </tbody>
+                </table>
+</label>
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Joining New York Blood Center in August, 2010, Eva Quinley is the senior vice president of quality and regulatory affairs with responsibilities for all quality systems and compliance, environmental health and safety and training. She is a specialist in blood banking with more than 35 years of experience in the blood banking industry. 
+<br><br>
+Eva holds a master’s degree in healthcare administration and education from the University of Memphis and a BS in medical technology from the University of Tennessee, Memphis. She is a specialist in blood banking and ASQ-certified quality auditor. She currently serves as chair of the Transfusion Medicine Section Coordinating Committee for AABB and is a member of the AABB Board of Directors. Eva has published numerous articles and most recently released the third edition of her blood banking textbook, Immunohematology: Principles and Practice. She is nationally and internationally known as an established trainer, speaker and resource for technical and quality/regulatory issues within the blood banking and plasma industries. She resides in Knoxville, Tennessee.</p>
+                </div>
+              </div>
+              
+              <!-- Panel 52 -->
+              <div>
+               <!-- <input type="checkbox" name="panel" id="panel-52">
+                <label for="panel-52">
+                        <img src="https://content.inxpo.com/FileLibrary/1416/6/Dr_Zyman105x105.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Dr. Alyssa Ziman, MD</p>
+                <p class="Heading5"><strong>Director of Transfusion Medicine, UCLA Health</strong></p>
+                </label>-->
+              </div>
+
+              <!-- Panel 53 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-53">
+                <label for="panel-53">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+              
+              <!-- Panel 54 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-54">
+                <label for="panel-44">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->              
+
+              <!-- Panel 55 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-55">
+                <!--<label for="panel-55">Panel 4</label>-->
+                <!--
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
+                </div>
+                -->
+              </div>
+              
+            </div>
+            <!-- .accordion -->
+          </li>
+                
+          <li class="read-more-target">
+            <p><img src="assets/img/TransfusionMedicineSmall2.png" width="15" height="23" alt=""/> <em>Transfusion Medicine</em></p>
+            <p>Defining the Future of Transfusion Medicine<br />
+              <strong>On Demand since  4/9/14</strong>
+            </p>
+            <p>The future of transfusion could be a network of laboratories that link seamlessly using
+one Laboratory Information Management System (LIMS) and deploying one system,
+one technology, at differing scales, that are easy to operate but capable of doing very 
+sophisticated work with high levels of integrity.</p>
+            <p><strong>Presented by</strong></p>
+            
+            <div class="accordion">
+              <!-- Panel 56 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-56">
+                <label for="panel-56">
+                <img src="https://content.inxpo.com/FileLibrary/1416/6/YvonneSsp.png" width="105" height="105" alt=""/>
+                <p class="Heading6">Yvonne Scott</p>
+                <p class="Heading5"><strong> Head of Blood Transfusion, Freeman Hospital, Newcastle, 
+United Kingdom </strong></p>
+                </label>
+
+                <div class="accordion__content">
+                  <!--<h2 class="accordion__header">Header</h2>-->
+                  <p class="accordion__body">Yvonne Scott started her career at the NHSBT Newcastle in 1979 and received a good knowledge 
+in blood transfusion, resulting in FIBMS after taking the IMLS Special Examination in Transfusion 
+Science. She moved to the Freeman hospital in 1988 to gain more knowledge in haematology 
+and hospital aspects of transfusion, as a result of which she passed the IMLS Two-part Fellowship 
+Examination in Haematology. She gained a promotion to BMS 2 in 1989 within the transfusion 
+section. In 1999, the merger of the Newcastle Hospitals formed a new Trust. The Newcastle upon 
+Tyne NHS Foundation Trust (NUTH) comprises of The Freeman Hospital and Royal Victoria 
+Infirmary. She is currently the head of blood transfusion for NUTH and has been in this post 
+for 10 years. The Trust is a large major teaching hospital and is a regional centre of excellence for 
+Transplantation with a Transplant Institute, Cardiothoracics, Paediatric Cardiac Surgery, Regional 
+Obstetrics Centre, Major Trauma Centre, Neurosurgery, Cancer Care, Paediatric Oncology and 
+Immunodeficiency.</p>
+                </div>
+              </div>
+              
+              <!-- Panel 57 -->
+              <div>
+               <!-- <input type="checkbox" name="panel" id="panel-57">
+                <label for="panel-57">
+                        <img src="https://content.inxpo.com/FileLibrary/1416/6/Dr_Zyman105x105.jpg" width="105" height="105" alt=""/>
+                <p class="Heading6">Dr. Alyssa Ziman, MD</p>
+                <p class="Heading5"><strong>Director of Transfusion Medicine, UCLA Health</strong></p>
+                </label>-->
+              </div>
+
+              <!-- Panel 58 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-58">
+                <label for="panel-58">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->
+              
+              <!-- Panel 59 -->
+              <!--
+              <div>
+                <input type="checkbox" name="panel" id="panel-59">
+                <label for="panel-59">
+                  <img src="" width="105" height="105" alt=""/>
+                  <p class="Heading6">Name</p>
+                  <p class="Heading5"><strong>Title</strong></p>
+                </label>
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              -->              
+
+              <!-- Panel 60 -->
+              <div>
+                <input type="checkbox" name="panel" id="panel-60">
+                <!--<label for="panel-60">Panel 4</label>-->
+                <!--
+                <div class="accordion__content">
+                  <h2 class="accordion__header">Header</h2>
+                  <p class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus at a cum saepe molestias modi illo facere ducimus voluptatibus praesentium deleniti fugiat ab error quia sit perspiciatis velit necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio provident ullam culpa rem tempora voluptatem inventore facere adipisci doloribus dolorum ad maxime itaque quasi animi aliquid voluptates rerum expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui culpa amet neque nostrum cumque eaque corrupti ad accusantium? Consectetur reiciendis ad earum aspernatur at quibusdam cupiditate rerum ipsam consequatur suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab rem explicabo exercitationem unde harum? Iste nobis quae animi illum laborum incidunt hic illo ad repellat repudiandae et alias facere magni.</p>
+                </div>
+                -->
+              </div>
+              
+            </div>
+            <!-- .accordion -->
+          </li>
+          
+        </ul>
+        <br />
+        <label for="post-2" class="read-more-trigger"></label>
+      </div>
+      <!-- END ACCORDION -->
+      
+    </div>
+  </div>
+  <!-- END MIDDLE CONTENT -->
+    
+  <!-- FOOTER CONTENT -->
+  <div id="footer-container">
+    <div class="footer-logo"><img width="253" height="92" alt="" src="assets/img/Ortho-WhiteLogo.png"></div>
+    <div class="footer-content">
+      <p>Ortho On Demand is the premiere online destination connecting laboratory professionals with thought leaders from around the workd to share industry best practices and innovations.</p>
+      <p>Presentations and all other content reflect the opinion of the content author(s).  The materials, presentations, and all other content do not necessarily represent the opinion of Ortho-Clinical Diagnostics, Inc.</p>
+      <p> Site intended for Global Health Professionals. <br />
+        This site is published by OCD which is solely responsible for its content. <br />
+        Last Modified Date: 8/14/15 7:39 PM </p>
+    </div>
+    <div class="footer-link-section">
+      <a href="http://www.orthoclinical.com/en-us/services/training-education" target="_blank" >www.orthoclinical.com </a>
+      <a href="https://presentations.inxpo.com/SharedContent/HTML/VX/ComputerTips.htm" target="_blank">FAQ</a>
+      <a href="https://vts.inxpo.com/scripts/Server.nxp?LASCmd=AI:4;F:APIUTILS!10" target="_blank">Check Compatibility</a>
+      <a href="mailto:eventsupport@inxpo.com&subject=Ortho%20ON%20DEMAND%20Support&CC=ajudson@topspingroup.com">Support</a>
+    </div>
+  </div>
+  <div id="copyright-container"> &copy; Ortho Clinical Diagnostics 2003-2015. All Rights Reserved.BB11290 <a href="https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LegalNotice.html" target="_blank" id="Contact2Link"> Legal Notice</a> | <a href="https://content.inxpo.com/FileLibrary/1416/22/027381_Safe_Harbor_Privacy_Policy_r1_docx.pdf" target="_blank">Safe Harbor Policy </a>| <a href="http://www.jnj.com/social-media-community-guidelines " target="_blank">Social Media Policy </a> </div>
+  <!-- END FOOTER CONTENT -->  
+</div>
+
+</body>
+</html>

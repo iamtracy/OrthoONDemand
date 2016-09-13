@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ortho OnDemand: Upcoming Events</title>
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href="assets/css/main.css" rel="stylesheet" type="text/css">
+
+<!-- JQUERY CSS -->
+<link href="assets/jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="assets/jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<!-- END JQUERY CSS -->
+
+<!-- SCRIPTS -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--<script type="text/javascript" src="jQueryAssets/jquery-1.11.1.min.js"></script>-->
+<script type="text/javascript">
+
+</script>
+<script language="javascript">
+
+var g_AffiliateKey = GetURLParamValue("AffiliateKey");
+var g_AffiliateData = GetURLParamValue("AffiliateData");
+
+/********UPDATE QUICK REGISTRATION LINK BETWEEN SINGLE QUOTES********/
+var g_iFrameRegUrlSrc = 'https://vts.inxpo.com/scripts/Server.nxp?LASCmd=AI:4;F:APIUTILS!51004&PageID=2C78C654-F796-4301-B55A-9E9D92D63196'; 
+var g_iFrameRegFinalUrlSrc = g_iFrameRegUrlSrc + '?AffiliateData=' + g_AffiliateData;
+
+var g_HomeUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/home.htm'l;
+var g_HomeFinalUrlSrc = g_HomeUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_AgendaUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/Upcoming.html';
+var g_AgendaFinalUrlSrc = g_AgendaUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_SpeakersUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/OnDemand.html';
+var g_SpeakersFinalUrlSrc = g_SpeakersUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_SponsorsUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LoginPage.html';
+var g_SponsorsFinalUrlSrc = g_SponsorsUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_FAQUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LoginPageCL.html';
+var g_FAQFinalUrlSrc = g_FAQUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_ContactUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/PrivacyPolicy.html';
+var g_ContactFinalUrlSrc = g_ContactUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_Contac2tUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LegalNotice.html';
+var g_Contact2FinalUrlSrc = g_Contact2UrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+var g_RegistrationUrlSrc = 'https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/registration.html';
+var g_RegistrationFinalUrlSrc = g_RegistrationUrlSrc + '?AffiliateKey=' + g_AffiliateKey + '&AffiliateData=' + g_AffiliateData;
+
+function GetURLParamValue(cParamName) {	
+  var cHRef = window.location.href;
+  var iPos = cHRef.indexOf("?");
+  if (iPos > -1)
+    {
+      cHRef = cHRef.substr(iPos+1);
+
+      var aValues = cHRef.split("&");
+      var aParamInfo;
+
+      for (var iLup = 0; iLup < aValues.length; iLup++)
+        {
+          aParamInfo = aValues[iLup].split("=");
+          if (aParamInfo && aParamInfo[0] == cParamName)
+            return aParamInfo[1]; 
+        }
+    }
+
+  return "";
+}
+
+function window_onload() {
+if(g_AffiliateKey || g_AffiliateData == "undefined"){
+document.getElementById("QRegFrame").src = g_FinalUrlSrc;
+document.getElementById("HomeLink").href = g_HomeFinalUrlSrc;
+	document.getElementById("AgendaLink").href = g_AgendaFinalUrlSrc;
+
+	document.getElementById("SpeakersLink").href = g_SpeakersFinalUrlSrc;
+document.getElementById("SponsorsLink").href = g_SponsorsFinalUrlSrc;
+document.getElementById("FAQLink").href = g_FAQFinalUrlSrc;
+document.getElementById("ContactLink").href = g_ContactFinalUrlSrc;
+document.getElementById("Contact2Link").href = g_Contact2FinalUrlSrc;
+document.getElementById("RegLink").href = g_RegistrationFinalUrlSrc;
+
+    }else {
+document.getElementById("QRegFrame").src = g_UrlSrc;
+document.getElementById("HomeLink").href = g_HomeUrlSrc;
+document.getElementById("AgendaLink").href = g_AgendaUrlSrc;
+document.getElementById("SpeakersLink").href = g_SpeakersUrlSrc;
+document.getElementById("SponsorsLink").href = g_SponsorsUrlSrc;
+document.getElementById("FAQLink").href = g_FAQUrlSrc;
+document.getElementById("ContactLink").href = g_ContactUrlSrc;
+document.getElementById("Contact2Link").href = g_Contact2UrlSrc;
+document.getElementById("RegLink").href = g_RegistrationUrlSrc;
+    }  
+}
+
+</script>
+
+<!-- END SCRIPTS -->
+
+</head>
+
+<body onload="window_onload()">
+
+<div id="main-container">
+
+  <!-- HEADER -->
+  <div id="header-container">
+    <div class="header-img">
+      <a href="home.html"><img src="assets/img/HeaderImage.jpg" width="275" height="100" alt=""/></a>
+    </div>
+    <div class="header-navbar">
+   <a href="home.html" id="OverviewLink">About</a>
+      <a href="Upcoming.html" id="AgendaLink">Upcoming Events</a>
+      <a href="OnDemand.html" id="SpeakersLink">Available ON DEMAND</a>
+      <a href="LoginPageCL.html" class="navbar-current" id="FAQLink">Login</a>
+      <a href="registration.html" class="btn" id="RegLink">Register</a>
+    </div>
+  </div>
+  <!-- END HEADER -->
+  
+  <!-- MIDDLE CONTENT -->
+  <div id="middle-container">
+    <div class="Heading1">Login</div>
+     <iframe src="https://vts.inxpo.com/scripts/Server.nxp?LASCmd=L:0&AI=1&InitialDisplay=1&ClientBrowser=0&ShowKey=26704" frameborder="0" width="1024" height="690" align="middle"></iframe>  
+  </div>
+  <!-- END MIDDLE CONTENT -->
+    
+  <!-- FOOTER CONTENT -->
+  <div id="footer-container">
+    <div class="footer-logo"><img width="253" height="92" alt="" src="assets/img/Ortho-WhiteLogo.png"></div>
+    <div class="footer-content">
+      <p>Ortho On Demand is the premiere online destination connecting laboratory professionals with thought leaders from around the workd to share industry best practices and innovations.</p>
+      <p>Presentations and all other content reflect the opinion of the content author(s).  The materials, presentations, and all other content do not necessarily represent the opinion of Ortho-Clinical Diagnostics, Inc.</p>
+      <p> Site intended for Global Health Professionals. <br />
+        This site is published by OCD which is solely responsible for its content. <br />
+        Last Modified Date: 8/14/15 7:39 PM </p>
+    </div>
+    <div class="footer-link-section">
+      <a href="http://www.orthoclinical.com/en-us/services/training-education" target="_blank" >www.orthoclinical.com </a>
+      <a href="https://presentations.inxpo.com/SharedContent/HTML/VX/ComputerTips.htm" target="_blank">FAQ</a>
+      <a href="https://vts.inxpo.com/scripts/Server.nxp?LASCmd=AI:4;F:APIUTILS!10" target="_blank">Check Compatibility</a>
+      <a href="mailto:eventsupport@inxpo.com&subject=Ortho%20ON%20DEMAND%20Support&CC=ajudson@topspingroup.com">Support</a>
+    </div>
+  </div>
+  <div id="copyright-container"> &copy; Ortho Clinical Diagnostics 2003-2015. All Rights Reserved.BB11290 <a href="https://presentations.inxpo.com/Shows/OrthoONDEMAND/Microsite/LegalNotice.html" target="_blank" id="Contact2Link"> Legal Notice</a> | <a href="https://content.inxpo.com/FileLibrary/1416/22/027381_Safe_Harbor_Privacy_Policy_r1_docx.pdf" target="_blank">Safe Harbor Policy </a>| <a href="http://www.jnj.com/social-media-community-guidelines " target="_blank">Social Media Policy </a> </div>
+  <!-- END FOOTER CONTENT -->  
+</div>
+
+</body>
+</html>
